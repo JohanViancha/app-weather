@@ -1,0 +1,14 @@
+<div class="container-nav">
+
+    <div class="search">
+        <app-container-search></app-container-search>        
+    </div>
+
+    <div class="container-nav_results">
+
+
+        <app-list-places-search *ngFor="let place of places" [place]="place"></app-list-places-search>
+ 
+    </div>
+
+</div>
