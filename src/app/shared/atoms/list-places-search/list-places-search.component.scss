@@ -2,9 +2,64 @@
 
 .list-places-container{
     margin-top: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.8rem;
+    justify-content: space-between;
+    padding: 1.2rem 0.8rem;
+    cursor: pointer;
+    box-sizing: border-box;
 
+    &:hover {
+        border: 1px solid #FFF;
+        transition: 0.3s;
+    }
+
+    &:hover .container-basic-place .container-basic-place__icon {
+        display: block;
+    }
+
+    &:hover .container-detail-place{
+        display:flex;
+    }
+}
+
+.container-basic-place{
+    display: flex;
+    justify-content: space-between;
+
+        
     &__name{
-        font-family: Raleway;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
         color:#FFF;
+    }
+
+    &__icon{
+        display: none;
+        color: #FFF;
+    }
+  
+}
+
+.container-detail-place{
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+    color:#FFFF;
+    box-sizing: border-box;
+    gap: 10px;
+    display:none;
+    font-family: 'Raleway', sans-serif;
+
+    & div:first-child{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__state, &__location{
+        font-size: 12px;
     }
 }

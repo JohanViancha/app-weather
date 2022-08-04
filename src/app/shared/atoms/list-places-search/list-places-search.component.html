@@ -1,7 +1,32 @@
-<div class="list-places-container">
 
-    <span class="list-places-container__name">{{place.name}}</span>
-    <span class="material-symbols-outlined">
-        chevron_right
-    </span>
-</div>
+
+<li *ngFor="let place of places" class="list-places-container">
+
+    <div class="container-basic-place">
+        <span class="container-basic-place__name">{{place.name}}</span>
+        <span class="container-basic-place__icon material-symbols-outlined">
+            chevron_right
+        </span>
+    </div>
+    
+
+    <div class="container-detail-place">
+        <div>
+            <span class="material-symbols-outlined">
+                pin_drop
+        </span>
+
+        <span class="container-detail-place__location">{{place.lat}}, {{place.lon}}</span>
+        </div>
+
+        <div class="container-detail-place__state">
+              {{!place.state? place.country :place.state}}
+        </div>
+        
+
+    
+    </div>
+</li>
+
+
+

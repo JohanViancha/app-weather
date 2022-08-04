@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { filter, map, Observable, Subject } from 'rxjs';
 import { places } from 'src/app/page/weather/models/places.models';
 import { environment } from 'src/environments/environment';
 
@@ -19,7 +19,7 @@ export class WeatherService {
 
 
    searchPlaces(query:string):Observable<places[]>{
-    return this.http.get<places[]>(`${this.apiUrlGeo}?&limit=10&q=${query}`);
+    return this.http.get<places[]>(`${this.apiUrlGeo}?limit=10&q=${query}`)
    }
 
 

@@ -9,16 +9,10 @@ import { places } from 'src/app/page/weather/models/places.models';
 })
 export class NavSearchComponent implements OnInit {
 
-  places: places[] = [];
-  constructor(private weatherServiceS: WeatherService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.weatherServiceS.querData$.subscribe((data:string)=>{
-      this.weatherServiceS.searchPlaces(data).subscribe((dataPlaces)=>{
-        this.places = dataPlaces;
-        
-      });
-  })
+   
   }
 
 }

@@ -1,7 +1,8 @@
 
 export interface places {
     lat:string
-    log:string
+    lon:string
     name: string
     country:string
+    state?: string;
 }

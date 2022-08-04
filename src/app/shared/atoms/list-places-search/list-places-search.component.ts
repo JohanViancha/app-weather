@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { WeatherService } from 'src/app/core/services/weather.service';
 import { places } from 'src/app/page/weather/models/places.models';
 
 @Component({
@@ -8,10 +9,18 @@ import { places } from 'src/app/page/weather/models/places.models';
 })
 export class ListPlacesSearchComponent implements OnInit {
 
-  @Input() place: places = {name:'', lat:'', log:'',country:''};
-  constructor() { }
+  places: places[] = [];
+
+  constructor(private weatherServiceS: WeatherService) { }
 
   ngOnInit(): void {
+    this.weatherServiceS.querData$.subscribe((data:string)=>{
+      this.weatherServiceS.searchPlaces(data).subscribe((dataPlaces)=>{
+        console.log(dataPlaces)
+        this.places = dataPlaces;
+        
+      });
+  })
   }
 
 }
