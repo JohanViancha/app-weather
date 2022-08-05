@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/core/services/weather.service';
-import { places } from 'src/app/page/weather/models/places.models';
 
 @Component({
   selector: 'app-nav-search',

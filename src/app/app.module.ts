@@ -13,6 +13,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './core/interceptors/auth-interceptor.service';
 import { ContainerSearchComponent } from './shared/molecules/container-search/container-search.component';
 import { FormsModule } from '@angular/forms';
+import { FooterWeatherComponent } from './shared/molecules/footer-weather/footer-weather.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     MainWeatherComponent,
     WeatherComponent,
     ContainerSearchComponent,
+    FooterWeatherComponent,
   ],
   imports: [
     BrowserModule,

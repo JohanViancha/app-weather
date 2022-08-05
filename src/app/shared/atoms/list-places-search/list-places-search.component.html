@@ -1,6 +1,6 @@
 
 
-<li *ngFor="let place of places" class="list-places-container">
+<li *ngFor="let place of places" class="list-places-container" (click)="sendDataPlace(place)">
 
     <div class="container-basic-place">
         <span class="container-basic-place__name">{{place.name}}</span>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/core/services/weather.service';
-import { places } from 'src/app/page/weather/models/places.models';
+import { Place } from 'src/app/page/weather/models/places.models';
 
 @Component({
   selector: 'app-list-places-search',
@@ -9,18 +9,20 @@ import { places } from 'src/app/page/weather/models/places.models';
 })
 export class ListPlacesSearchComponent implements OnInit {
 
-  places: places[] = [];
+  places: Place[] = [];
 
   constructor(private weatherServiceS: WeatherService) { }
 
   ngOnInit(): void {
     this.weatherServiceS.querData$.subscribe((data:string)=>{
       this.weatherServiceS.searchPlaces(data).subscribe((dataPlaces)=>{
-        console.log(dataPlaces)
-        this.places = dataPlaces;
-        
+        this.places = dataPlaces; 
       });
   })
+  }
+
+  sendDataPlace(place: Place){
+    this.weatherServiceS.placeData$.next(place);
   }
 
 }
