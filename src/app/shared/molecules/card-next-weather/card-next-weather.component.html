@@ -1,12 +1,12 @@
 <div class="container-card" >
     
-    <div class="list-weather" *ngFor="let weather of listWeather.list">
-        <span class="list-weather__title"></span>
-        <img src="" alt="Imagen del clima">
+    <div class="list-weather" *ngFor="let weather of (listWeather | listDayWeather)">
+        <span class="list-weather__title">{{weather.dt_txt | dateDay}}</span>
+        <img [src]="'http://openweathermap.org/img/wn/'+weather.weather[0].icon+ '@2x.png'" alt="Imagen del clima">
     
         <div class="list-weather-temperature">
-            <span class="container-temperature__max"></span>
-            <span class="container-temperature__min"></span>
+            <span class="container-temperature__max">{{weather.main.temp_max}}</span>
+            <span class="container-temperature__min">{{weather.main.temp_min}}</span>
     
         </div>
     </div>

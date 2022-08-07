@@ -1,0 +1,4 @@
+<div class="type-temparature">
+    <span *ngFor="let type of typeTemperature" (click)="changeTypeTemperature(type.units)" [ngClass]="{'select-type': type.select, 'no-select-type': !type.select}">{{type.label}}</span>
+  
+</div>

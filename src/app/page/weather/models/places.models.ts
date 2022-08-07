@@ -7,6 +7,13 @@ export interface Place {
     state?: string;
 }
 
+export interface TypeTemperature {
+    label: string,
+    name: string,
+    select:boolean,
+    units:string
+}
+
 export interface PlaceWeather {
     cod?:     string;
     message?: number;

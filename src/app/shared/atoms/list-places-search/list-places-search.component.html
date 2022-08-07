@@ -20,7 +20,7 @@
         </div>
 
         <div class="container-detail-place__state">
-              {{!place.state? place.country :place.state}}
+              {{place.state? place?.state + '  |  ': place?.state}} {{place?.country}}
         </div>
         
 

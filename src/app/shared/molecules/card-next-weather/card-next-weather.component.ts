@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { PlaceWeather } from 'src/app/page/weather/models/places.models';
+import { WeatherService } from 'src/app/core/services/weather.service';
+import { List, PlaceWeather } from 'src/app/page/weather/models/places.models';
 
 @Component({
   selector: 'app-card-next-weather',
@@ -9,12 +10,11 @@ import { PlaceWeather } from 'src/app/page/weather/models/places.models';
 export class CardNextWeatherComponent implements OnInit, OnChanges {
 
   @Input() dataWeather: PlaceWeather = {}
-  listWeather : PlaceWeather = {};
-  constructor() { }
+  listWeather : List[] = [];
+  constructor(private servicesWeather: WeatherService) { }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
-    this.listWeather = this.dataWeather;
+    this.listWeather = this.dataWeather.list || [];
   }
 
   ngOnInit(): void {

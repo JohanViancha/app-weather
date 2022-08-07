@@ -14,6 +14,10 @@ import { AuthInterceptorService } from './core/interceptors/auth-interceptor.ser
 import { ContainerSearchComponent } from './shared/molecules/container-search/container-search.component';
 import { FormsModule } from '@angular/forms';
 import { FooterWeatherComponent } from './shared/molecules/footer-weather/footer-weather.component';
+import { DateDayPipe } from './core/pipes/date-day.pipe';
+import { ListDayWeatherPipe } from './core/pipes/list-day-weather.pipe';
+import { TypeTemperatureComponent } from './shared/molecules/type-temperature/type-temperature.component';
+import { CardTodayHighlightComponent } from './shared/molecules/card-today-highlight/card-today-highlight.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { FooterWeatherComponent } from './shared/molecules/footer-weather/footer
     WeatherComponent,
     ContainerSearchComponent,
     FooterWeatherComponent,
+    DateDayPipe,
+    ListDayWeatherPipe,
+    TypeTemperatureComponent,
+    CardTodayHighlightComponent,
   ],
   imports: [
     BrowserModule,

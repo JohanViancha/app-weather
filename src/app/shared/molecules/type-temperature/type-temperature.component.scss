@@ -1,0 +1,32 @@
+
+.type-temparature{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin:30px 0px;
+    gap:10px;
+}
+
+.type-temparature span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.select-type{
+    background-color: #E7E7EB;
+    color: #110E3C;
+}
+
+.no-select-type{
+    background-color: #585676;
+    color: #E7E7EB;
+}

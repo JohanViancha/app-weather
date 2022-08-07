@@ -3,14 +3,25 @@
 .container-card{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
+    gap:10px;
 }
 
 .list-weather{
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: #1E213A;
     color: #E7E7EB;
     width: 120px;
     height: 177px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-weather-temperature{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
