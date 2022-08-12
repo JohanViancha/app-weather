@@ -7,11 +7,18 @@ export interface Place {
     state?: string;
 }
 
+export interface MapWeather{
+    id:string,
+    value:number,
+    name:string,
+    unit: string
+}
+
 export interface TypeTemperature {
     label: string,
     name: string,
     select:boolean,
-    units:string
+    units: EnumTypeTemperature
 }
 
 export interface PlaceWeather {
@@ -101,4 +108,10 @@ export interface Artist {
 export interface Track {
     name:     string;
     duration: number;
+}
+
+export enum EnumTypeTemperature{
+    Standard='standard',
+    Metric='metric',
+    Imperial = 'imperial'
 }

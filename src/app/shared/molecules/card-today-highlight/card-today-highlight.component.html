@@ -1,5 +1,29 @@
-<div class="container-card" >
+<div class="container-card card-highlight" [ngStyle]="{'height': data.id.includes('v') || data.id.includes('a') ? '200px':'250px'} ">
     
+    <span class="card-highlight__name">{{data.name}}</span>
 
+    <span class="card-highlight__value">{{data.value}} {{data.unit}}</span>
+
+    <div *ngIf="data.id==='w'">
+        <span class="material-symbols-outlined">
+            near_me
+        </span>
+        <span> WSW</span>
+    </div>
+
+    <div class="progress-container" *ngIf="data.id==='h'">
+        <div class="progress-container__percentege">
+            <span>0</span>
+            <span>50</span>
+            <span>100</span>
+        </div>
+
+        <div class="progress-container__value">
+            <progress [value]="data.value" max="100"></progress>
+        </div>
+        <div class="progress-container__unit">
+            <span>%</span>
+        </div>
+    </div>
 
 </div>

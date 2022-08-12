@@ -5,3 +5,11 @@ body{
     box-sizing: border-box;
 }
 
+.container-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap:10px;
+}

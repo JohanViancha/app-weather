@@ -1,0 +1,44 @@
+
+.card-highlight{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 375px;
+    background-color: #1E213A;
+    color: #E7E7EB;
+    padding: 30px 30px 40px 30px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+
+    &__name{
+        font-size: 16px;
+        font-weight:500;
+    }
+
+    &__value{
+        font-size: 64px;
+        font-weight:700;
+    }
+}
+
+.progress-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    &__percentege{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__value progress{
+        width:100%;
+    }
+    &__unit {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}

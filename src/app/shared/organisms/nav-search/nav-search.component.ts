@@ -8,10 +8,18 @@ import { WeatherService } from 'src/app/core/services/weather.service';
 })
 export class NavSearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private weatherServices: WeatherService) {
+
+   }
 
   ngOnInit(): void {
    
+    this.weatherServices.placeData$.subscribe((data)=>{
+      const coord = {lat:data.lat, lon:data.lon};
+      this.weatherServices.getWeatherToday(coord).subscribe((data)=>{
+        console.log(data)
+      })
+    })
   }
 
 }

@@ -8,6 +8,15 @@
 
     <div class="data-highlight-today">
         <h3>Today's Highlight</h3>
+        <div class="data-highlight-today__container">
+            <app-card-today-highlight [data]="wind"></app-card-today-highlight>
+            <app-card-today-highlight [data]="humidity"></app-card-today-highlight>
+            <app-card-today-highlight [data]="visibility"></app-card-today-highlight>
+            <app-card-today-highlight [data]="airPressure"></app-card-today-highlight>
+    
+        </div>
+       
+
     </div>
 
 

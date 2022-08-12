@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WeatherService } from 'src/app/core/services/weather.service';
-import { TypeTemperature } from 'src/app/page/weather/models/places.models';
+import { EnumTypeTemperature, TypeTemperature } from 'src/app/page/weather/models/places.models';
 
 @Component({
   selector: 'app-type-temperature',
@@ -14,7 +14,7 @@ export class TypeTemperatureComponent implements OnInit {
         label:'°C',
         name:'Celcius',
         select:true,
-        units:'metric'
+        units: EnumTypeTemperature.Metric
 
       },
 
@@ -22,14 +22,14 @@ export class TypeTemperatureComponent implements OnInit {
         label:'°F',
         name:'Fahrenheit',
         select:false,
-        units:'imperial'
+        units:EnumTypeTemperature.Imperial
 
       },
       {
         label:'K',
         name: 'Kelvin',
         select:false,
-        units:'standard'
+        units:EnumTypeTemperature.Standard
 
       }
   ];
@@ -42,7 +42,7 @@ export class TypeTemperatureComponent implements OnInit {
 
   }
 
-  changeTypeTemperature(units:string){
+  changeTypeTemperature(units:EnumTypeTemperature){
     this.typeTemperature.map((el)=>el.units === units? el.select=true:el.select=false);
     this.weatherService.changeTypeTemperature$.next(units);
   }
