@@ -14,5 +14,131 @@
     height: 100%;
     top: 0px;
     left: -100%;
+    background:#1E213A;
+    padding: 2.2rem;
+    visibility: hidden;
+
+    &__cloud{
+        opacity:0.2;
+        width:140px;
+        height:140px;
+        position:absolute
+    }
 }
 
+.showToday{
+    transform:translateX(100%);
+    transition: 1s all;
+    visibility:visible;
+}
+
+
+.cloud-one{
+    top:20%;
+    left: 82%;
+}
+
+.cloud-two{
+    top:20%;
+    left: -10%;
+}
+
+
+.cloud-three{
+    top:50%;
+    left: -10%;
+}
+
+
+.cloud-four{
+    top:50%;
+    left: 82%;
+}
+
+
+.option-search{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__button, &__icon{
+        background:#6E707A;
+        color:#E7E7EB;
+    }
+    &__button{
+        width:161px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    &__icon{
+        width:40px;
+        height:40px;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+    }
+}
+
+.data-today{
+    text-align: center;
+    height: 90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.container-img{
+    &__img{
+        width:170px;
+        height:170px;
+        image-rendering: crisp-edges;
+    }
+}
+
+.container-information{
+    color:#E7E7EB;
+    font-family: 'Raleway', sans-serif;
+    height: 60%;
+    &__temp{
+        font-size: 85px;
+        margin: 40px 0px;
+        display: block;
+    }
+
+    &__main{
+        font-size: 36px;
+        color: #6E707A;
+        margin: 0.3rem;
+    }
+
+    &__desc{
+        font-size: 21px;
+        color: #6E707A;
+        text-transform: capitalize;
+        margin: 0 0 3rem 0;
+    }
+
+    &__date{
+
+        margin: 0 0 3rem 0;
+        &--text{
+            margin-right: 1rem;
+        }
+        &--date{
+            margin-left: 1rem;
+        }
+    }
+
+}
+
+
+.today-location{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+    align-items: center;
+}

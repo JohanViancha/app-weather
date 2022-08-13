@@ -115,3 +115,32 @@ export enum EnumTypeTemperature{
     Metric='metric',
     Imperial = 'imperial'
 }
+
+
+
+export interface TodayWeather {
+    coord?:      Coord;
+    weather?:    Weather[];
+    base?:       string;
+    main?:       Main;
+    visibility?: number;
+    wind?:       Wind;
+    clouds?:     Clouds;
+    dt?:         number;
+    sys?:        SysCurrent;
+    timezone?:   number;
+    id?:         number;
+    name?:        string;
+    cod?:        number;
+    founded?:    number;
+    members?:    string[];
+}
+
+export interface SysCurrent {
+    type:    number;
+    id:      number;
+    message: number;
+    country: string;
+    sunrise: number;
+    sunset:  number;
+}

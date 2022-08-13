@@ -48,12 +48,13 @@ export class MainWeatherComponent implements OnInit {
     }
 
     async getTypeWind(){
-      console.log(this.unit)
+
       switch(this.unit){
         case EnumTypeTemperature.Imperial:
           this.wind.unit = 'miph'
         break;
-        case EnumTypeTemperature.Metric || EnumTypeTemperature.Standard:
+        case EnumTypeTemperature.Metric:
+        case EnumTypeTemperature.Standard:
           this.wind.unit = 'mps'
         break;
       }

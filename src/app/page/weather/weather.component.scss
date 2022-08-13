@@ -9,5 +9,19 @@
 
     & .main{
         width: 100%;
+        z-index:2;
     }
+}
+
+
+@media (max-width:1072px) {
+    .container{
+        flex-direction: column;
+
+        & .nav{
+            width: 100%;
+        }
+    
+    }
+   
 }

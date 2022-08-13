@@ -25,3 +25,10 @@
     flex-wrap: wrap;
     gap:60px
 }
+
+@media (max-width:1483px) {
+    .data-highlight-today__container{
+        justify-content: center;
+    }
+}
+

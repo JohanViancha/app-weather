@@ -10,7 +10,7 @@ export class DateDayPipe implements PipeTransform {
 
   transform(value: Date, ...args: unknown[]): unknown {
 
-    return moment(value).format("ddd,D MMM")
+    return moment.utc(value).format("ddd,D MMM")
   }
 
 }

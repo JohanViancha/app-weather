@@ -11,8 +11,45 @@
  
     </div>
 
-    <div class="container-today">
-    
+    <div class="container-today container-nav" [ngClass]="{'showToday': showToday}">
+
+        <div class="option-search">
+            <button class="option-search__button" (click)="hideToday()">Search for places</button>
+            <div class="option-search__icon">
+                <span class="material-symbols-outlined ">
+                    my_location
+                </span>
+            </div>
+            
+        </div>
+        <img class="container-today__cloud cloud-one" src="../../../../assets/nube.png" />
+        <img class="container-today__cloud cloud-two" src="../../../../assets/nube.png" />
+        <img class="container-today__cloud cloud-three" src="../../../../assets/nube.png" />
+        <img class="container-today__cloud cloud-four" src="../../../../assets/nube.png" />
+
+        <div class="data-today">
+            <div class="container-img">
+                <img class="container-img__img" [src]="'http://openweathermap.org/img/wn/'+todayData.weather?.[0]?.icon+ '@2x.png'" />
+            </div>
+          <div class="container-information">
+            <span class="container-information__temp">{{todayData.main?.temp}} {{unit}}</span>
+            <p class="container-information__main">{{todayData.weather?.[0]?.main}}</p>
+            <p class="container-information__desc">{{todayData.weather?.[0]?.description}}</p>
+
+            <p class="container-information__date"><span class="container-information__date--text">Today</span> - <span class="container-information__date--date">{{dateToday | dateDay}}</span></p>
+
+            <div class="today-location">
+                <span class="material-symbols-outlined">
+                    location_on
+                    </span>
+
+                <span>{{todayData.name}}</span>    
+            </div>
+          </div>
+           
+
+
+        </div>
     </div>
 
 </div>
